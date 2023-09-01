@@ -12,7 +12,6 @@ internal struct Place: Codable {
     let categories: [Category]
     let distance: Int
     let location: Location
-    let geocodes: Geocodes
 
     var address: String {
         location.formattedAddress ??
@@ -20,12 +19,11 @@ internal struct Place: Codable {
         ""
     }
     enum CodingKeys: String, CodingKey {
-        case id = "fsq_id"
-        case distance
-        case categories
-        case location
         case name
-        case geocodes
+        case id = "fsq_id"
+        case categories
+        case distance
+        case location
     }
 
     func encode(to encoder: Encoder) throws {
@@ -35,7 +33,6 @@ internal struct Place: Codable {
         try container.encode(categories, forKey: .categories)
         try container.encode(distance, forKey: .distance)
         try container.encode(location, forKey: .location)
-        try container.encode(geocodes, forKey: .geocodes)
     }
 }
 extension Place {
@@ -45,31 +42,14 @@ extension Place {
         let name: String
     }
 
-    // MARK: - Geocodes
-    struct Geocodes: Codable {
-        let main: Center
-    }
-
-    // MARK: - Center
-    struct Center: Codable {
-        let latitude: Double
-        let longitude: Double
-    }
-
     // MARK: - Location
     struct Location: Codable {
         let address: String?
-        let country: String?
         let formattedAddress: String?
-        let postcode: String?
-        let region: String?
         
         enum CodingKeys: String, CodingKey {
             case address
-            case country
             case formattedAddress = "formatted_address"
-            case postcode
-            case region
         }
     }
 }
