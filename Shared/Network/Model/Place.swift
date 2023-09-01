@@ -3,7 +3,6 @@
 //
 //
 //
-// TODO: Cleanup the data that I am not using
 import Foundation
 
 internal struct Place: Codable {

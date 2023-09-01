@@ -17,11 +17,17 @@ internal struct SearchPlacesRequest: Request {
     
     let path: String = "places/search"
     
-    let queryParameters: [URLQueryItem] = []
+    var queryParameters: [URLQueryItem] = []
 
     var counter: UInt = 0
     
     var headers: [String : String] = [:]
     
     internal func encode(to encoder: Encoder) throws {}
+
+    init() {}
+
+    init(queryParameters: [URLQueryItem]) {
+        self.queryParameters = queryParameters
+    }
 }

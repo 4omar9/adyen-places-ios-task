@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0760A9092AA2200100F77086 /* PlacesScreen+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760A9082AA2200100F77086 /* PlacesScreen+ViewModel.swift */; };
+		0760A90C2AA2334000F77086 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760A90B2AA2334000F77086 /* LocationService.swift */; };
 		5AC5AD092A0278EF00C59D84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5AD082A0278EF00C59D84 /* AppDelegate.swift */; };
 		5AC5AD0B2A0278EF00C59D84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5AD0A2A0278EF00C59D84 /* SceneDelegate.swift */; };
 		5AC5AD0D2A0278EF00C59D84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5AD0C2A0278EF00C59D84 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		0760A9082AA2200100F77086 /* PlacesScreen+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlacesScreen+ViewModel.swift"; sourceTree = "<group>"; };
+		0760A90B2AA2334000F77086 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		5AC5AD062A0278EF00C59D84 /* PlacesUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC5AD082A0278EF00C59D84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AC5AD0A2A0278EF00C59D84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0760A90A2AA2333100F77086 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				0760A90B2AA2334000F77086 /* LocationService.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
 		5AC5AD072A0278EF00C59D84 /* PlacesUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		5AC5AD1A2A02790B00C59D84 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0760A90A2AA2333100F77086 /* LocationService */,
 				B13196B429DC817600981DC7 /* Network */,
 			);
 			path = Shared;
@@ -421,6 +432,7 @@
 			files = (
 				B15C5DD929D61B3300A816C4 /* PlacesScreen.swift in Sources */,
 				0760A9092AA2200100F77086 /* PlacesScreen+ViewModel.swift in Sources */,
+				0760A90C2AA2334000F77086 /* LocationService.swift in Sources */,
 				B13196BD29DC817600981DC7 /* PlacesResponse.swift in Sources */,
 				B15C5DAB29D61A9200A816C4 /* PlacesApp.swift in Sources */,
 				B13196BB29DC817600981DC7 /* PlacesAPIContext.swift in Sources */,
@@ -665,11 +677,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Places;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs to access your precise location to be able to show nearby places <The app is designed with the assumption that location service will be allowed>";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INSTALL_OWNER = adyen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -696,11 +708,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Places;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs to access your precise location to be able to show nearby places <The app is designed with the assumption that location service will be allowed>";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INSTALL_OWNER = adyen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
