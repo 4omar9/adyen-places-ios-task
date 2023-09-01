@@ -13,12 +13,12 @@ internal struct SearchPlacesRequest: Request {
     
     typealias ErrorResponseType = EmptyErrorResponse
     
-    let method: HTTPMethod = .post
+    let method: HTTPMethod = .get
     
     let path: String = "places/search"
     
     let queryParameters: [URLQueryItem] = []
-    
+
     var counter: UInt = 0
     
     var headers: [String : String] = [:]
