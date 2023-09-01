@@ -11,7 +11,7 @@ struct PlacesScreen: View {
 
     @StateObject var viewModel: ViewModel = .init()
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 createLocationAuthorizationView()
                 if viewModel.preciseLocationEnabled {
