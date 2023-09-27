@@ -30,10 +30,10 @@ struct PlacesScreen: View {
                 Spacer()
             }
             .refreshable {
-                viewModel.loadData()
+               await viewModel.loadData()
             }
-            .onAppear {
-                viewModel.loadData()
+            .task {
+                await viewModel.loadData()
             }
             .navigationTitle("Places")
         }
@@ -74,8 +74,10 @@ struct PlacesScreen: View {
                 Text("1000")
             } maximumValueLabel: {
                 Text("100000")
-            } onEditingChanged: { value in
-                viewModel.loadData()
+            } onEditingChanged: { _ in
+                Task {
+                    await viewModel.loadData()
+                }
             }
             Text("Your current Radius: \(Int(viewModel.radiusOfInterest))")
                 .font(.system(.footnote))
@@ -118,7 +120,9 @@ struct PlacesScreen: View {
         VStack(alignment: .center, spacing: 40) {
             Text(error)
             Button("Reload") {
-                viewModel.loadData()
+                Task {
+                    await viewModel.loadData()
+                }
             }
         }
     }

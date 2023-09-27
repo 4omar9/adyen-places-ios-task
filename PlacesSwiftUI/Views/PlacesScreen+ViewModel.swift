@@ -36,7 +36,7 @@ extension PlacesScreen {
 
         func enableUpdatingLocation() {
             Task {
-                if await locationService.startUpdatingLocation() {
+                if locationService.startUpdatingLocation() {
                     print("Location Authorized")
                 } else {
                     print("Location Not Authorized")
@@ -55,19 +55,17 @@ extension PlacesScreen {
                 await loadData()
             }
         }
-        
+
         @MainActor
-        func loadData() {
-            Task {
-                do {
-                    let places = try await fetchPlaces(
-                        coordinate: preciseLocationEnabled ? coordinates: nil,
-                        radius: preciseLocationEnabled ? "\(Int(radiusOfInterest))": nil
-                    )
-                    state = .loaded(places)
-                } catch {
-                    state = .error("Data not loaded with error \(error)")
-                }
+        func loadData() async {
+            do {
+                let places = try await fetchPlaces(
+                    coordinate: preciseLocationEnabled ? coordinates: nil,
+                    radius: preciseLocationEnabled ? "\(Int(radiusOfInterest))": nil
+                )
+                state = .loaded(places)
+            } catch {
+                state = .error("Data not loaded with error \(error)")
             }
         }
 

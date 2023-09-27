@@ -20,7 +20,7 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
     }
 
-    func startUpdatingLocation() async -> Bool {
+    func startUpdatingLocation() -> Bool {
         locationManager.startUpdatingLocation()
         return CLLocationManager.locationServicesEnabled()
     }
