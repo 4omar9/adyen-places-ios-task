@@ -1,5 +1,5 @@
-# adyen-places-ios-task
-Assignment done for Adyen interview process. 
+# ios-code-sample
+Initially this was an assignment done for an interview process, I have decided to repurpose it to be a generic code sample.
 
 All the UI components are done using SwiftUI, 
 Therefore please make sure you selecte "PleacesSwiftUI" target to run the project.
