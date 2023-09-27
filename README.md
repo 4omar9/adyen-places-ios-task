@@ -3,7 +3,10 @@ Initially this was an assignment done for an interview process, I have decided t
 
 All the UI components are done using SwiftUI, 
 Therefore please make sure you selecte "PleacesSwiftUI" target to run the project.
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-09-01 at 18 07 52](https://github.com/4omar9/adyen-places-ios-task/assets/6820757/2f69a9bb-4804-488c-b72d-528f4633c242)
+
+### Screenshots
+
+![265141790-2f69a9bb-4804-488c-b72d-528f4633c242](https://github.com/4omar9/ios-code-sample/assets/6820757/2fd072dd-030f-4bb6-9c14-52cd8c3a98ba)
 
 
 #### Note:
